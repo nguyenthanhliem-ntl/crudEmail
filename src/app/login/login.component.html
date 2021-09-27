@@ -1,0 +1,19 @@
+<!--<form (ngSubmit)="onCreate()" [formGroup]="formLogin" >-->
+<!--  <input type="text" formControlName="email" ngModel email required><br>-->
+<!--  <p *ngIf="formLogin.touched && formLogin.errors?.required">Không được để trống</p>-->
+<!--  <p *ngIf="formLogin.touched && formLogin.errors?.email">định dạng lại email</p>-->
+<!--  <input type="password" ngModel required formControlName="password"><br>-->
+<!--  <p *ngIf="formLogin.touched && formLogin.errors?.required"></p>-->
+<!--  <button>Create</button>-->
+<!--</form>-->
+<div >
+  <input placeholder="en" [(ngModel)]="email"/>
+  <input placeholder="vn" [(ngModel)]="password"/>
+  <button (click)="onCreate()">Thêm</button>
+</div>
+<div *ngFor="let hi of acc" class="form">
+  <p>email: {{hi.email}}</p>
+  <p>password: {{hi.password}}</p>
+  <button (click)="remote(hi.id)">Del</button>
+  <button (click)="edit(hi.id)">Edit</button>
+</div>
